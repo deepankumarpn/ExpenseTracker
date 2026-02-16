@@ -23,5 +23,206 @@
 hs_err_pid*
 replay_pid*
 
-# Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+gradle-app.setting
+.gradletasknamecache
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Android ###
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+# IntelliJ
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/jarRepositories.xml
+.idea/caches
+.idea/modules.xml
+.idea/.name
+.idea/compiler.xml
+.idea/misc.xml
+
+# Keystore files - DO NOT COMMIT
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+GoogleService-Info.plist
+
+# Signing files
+.signing/
+
+# Android Profiling
+*.hprof
+
+### Kotlin Multiplatform ###
+*.kotlin_module
 .kotlin/
+
+# Kotlin Native
+*.klib
+*.knm
+
+# KMP Metadata
+**/.kmp/
+
+# Compose Resources Cache
+.compose.cache/
+**/composeResources/cache/
+
+### iOS / Xcode ###
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# iOS environment
+ios/.xcode.env.local
+
+# CocoaPods
+iosApp/Pods/
+Podfile.lock
+*.xcworkspace/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
+# Carthage
+Carthage/Build/
+
+### Desktop ###
+# JVM Desktop
+*.exe
+*.app
+*.dmg
+
+### Web ###
+# JS/WASM
+webpack.config.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Linux ###
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+### Windows ###
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+### VSCode ###
+.vscode/
+*.code-workspace
+.history/
+
+### AI Tools ###
+.claude/
+
+### Eclipse ###
+.classpath
+.project
+.settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.loadpath
+.recommenders
+.target/
+
+### Secrets and Config ###
+secrets.properties
+apikeys.properties
+config.properties
+*.env
+.env.local
+.env.*.local
+
+### Test Coverage ###
+coverage/
+*.lcov
+.nyc_output/
+
+### Build Outputs ###
+dist/
+libs/
+gen/
+generated/
