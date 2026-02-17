@@ -37,19 +37,8 @@ class AndroidAppInfo(private val context: Context) : AppInfo {
     override val osVersion: String = "Android ${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})"
     override val deviceModel: String = "${Build.MANUFACTURER} ${Build.MODEL}"
 
-    /**
-     * Detects if this is a debug build by checking multiple indicators:
-     * 1. Build.FINGERPRINT contains "test-keys" (debug/unofficial builds)
-     * 2. Build.TYPE is "userdebug" or "eng" (engineering builds)
-     * 3. Build.TAGS contains "test-keys" or "dev-keys"
-     * 4. Application is debuggable (requires context, so not used here)
-     */
     override val isDebug: Boolean =
-        Build.FINGERPRINT.contains("test-keys", ignoreCase = true) ||
-        Build.TYPE.equals("userdebug", ignoreCase = true) ||
-        Build.TYPE.equals("eng", ignoreCase = true) ||
-        Build.TAGS.contains("test-keys", ignoreCase = true) ||
-        Build.TAGS.contains("dev-keys", ignoreCase = true)
+        (context.applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0
 
     override fun getDefaultCurrency(): CurrencyType {
         return try {
